@@ -10,10 +10,10 @@ const useStyleBanner = createUseStyles({
   modelImage: {
     "& img": {
       width: "100%",
-      //   height: "100%",
-      //   display: "block",
+      height: "100%",
+      display: "block",
       objectFit: "contain",
-      objectPosition: "0px -120px",
+      objectPosition: "0px -100px",
     },
   },
   modelContent: {

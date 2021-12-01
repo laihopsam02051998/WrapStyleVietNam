@@ -7,10 +7,10 @@ function Header() {
   const classes = useStyleHeader();
 
   // CHOOSE TAB IN HEADER
-  const [isOpen, setIsOpen] = useState(false);
+  const [isTouch, setIsTouch] = useState(false);
   useEffect(() => {
     document.getElementById("Touch").classList.toggle("active");
-  }, [isOpen]);
+  }, [isTouch]);
 
   return (
     <section className={classes.header}>
@@ -21,9 +21,6 @@ function Header() {
               <Link to="/">
                 <img src={logo} alt />
               </Link>
-            </li>
-            <li id="menuActivity">
-              <Link to="/Activity">DỊCH VỤ</Link>
             </li>
 
             <li id="menuCooprate">
@@ -36,17 +33,19 @@ function Header() {
             <li id="menuModel">
               <Link to="/BookingService">ĐẶT LỊCH</Link>
             </li>
+            <li>
+              <Link to="/AboutUs">VỀ CHÚNG TÔI</Link>
+            </li>
           </ul>
         </div>
         <div className={classes.header__right}>
           <ul>
             <li>
-              <Link to="/AboutUs">VỀ CHÚNG TÔI</Link>
-            </li>
-            <li>
               <Link to="/News">TIN TỨC</Link>
             </li>
-
+            <li id="menuActivity">
+              <Link to="/Activity">GIẢI ĐẤU</Link>
+            </li>
             <li>
               <Link to="/Hiring">TUYỂN DỤNG</Link>
             </li>
@@ -86,11 +85,51 @@ function Header() {
             <li>
               <div
                 className={classes.Touch}
-                onClick={() => setIsOpen(!isOpen)}
+                onClick={() => setIsTouch(!isTouch)}
                 id="Touch"
               />
             </li>
           </ul>
+        </div>
+      </div>
+      <div
+        className={
+          isTouch === true ? classes.touchContent : classes.touchContentHide
+        }
+      >
+        <div className={classes.serviceHeader}>
+          <h2>DỊCH VỤ</h2>
+          <Link to="/ModelProduct">
+            <h5>CAR WRAPPING</h5>
+          </Link>
+          <Link to="/CarDetailing">
+            <h5>CAR DETAILING</h5>
+          </Link>
+          <Link to="/PaintProtection">
+            <h5>PAINT PROTECTION</h5>
+          </Link>
+        </div>
+        <div className={classes.serviceHeader}>
+          <h2>HỢP TÁC</h2>
+          <h5>QUẢNG CÁO BANNER</h5>
+          <h5>HỢP TÁC SẢN PHẨM</h5>
+        </div>
+        <div className={classes.serviceHeader}>
+          <h2>SẢN PHẨM</h2>
+          <h5>PHỤ KIỆN</h5>
+          <h5>ỐNG XẢ</h5>
+          <h5>MÂM</h5>
+        </div>
+        <div className={classes.serviceHeader}>
+          <h2>SẢN PHẨM</h2>
+          <h5>PHỤ KIỆN</h5>
+          <h5>ỐNG XẢ</h5>
+          <h5>MÂM</h5>
+        </div>
+        <div className={classes.laguageHeader}>
+          <h2>NGÔN NGỮ</h2>
+          <h5>VIETNAM</h5>
+          <h5>ENGLISH</h5>
         </div>
       </div>
     </section>
