@@ -7,7 +7,6 @@ const useStyleHeader = createUseStyles({
     overflow: "hidden",
     fontSize: "1rem",
     transition: " all 0.6s ease",
-    // position: "fixed",
     zIndex: "99",
   },
   header__menu: {

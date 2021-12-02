@@ -1,6 +1,7 @@
 import { createUseStyles } from "react-jss";
 
 const useStyleBanner = createUseStyles({
+  //START CONTAINER BANNER
   containerBanner: {
     position: "relative",
     height: "40rem",
@@ -42,6 +43,26 @@ const useStyleBanner = createUseStyles({
       lineHeight: "2rem",
     },
   },
+  //END CONTAINER BANNER
+
+  //START CONTAINER BANNERL
+  containerBannerL: {
+    position: "relative",
+    height: "20rem",
+    overflow: "hidden",
+  },
+
+  BannerImage: {
+    width: "100%",
+    "& img": {
+      width: "100%",
+      height: "100%",
+      display: "block",
+      objectFit: "contain",
+      objectPosition: "0px -300px",
+    },
+  },
+  //END CONTAINER BANNERL
 });
 
 export default useStyleBanner;
