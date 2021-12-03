@@ -176,6 +176,20 @@ const useStyleHeader = createUseStyles({
       display: "none",
     },
   },
+
+  avatarContent: {
+    display: "block",
+    color: "white",
+    width: "100%",
+    height: "45vh",
+    padding: "0rem 4rem",
+    transition: "0.6s ease",
+  },
+  avatarContentHide: {
+    height: "0vh",
+    overflow: "hidden",
+    transition: "0.6s ease",
+  },
   showButton: {
     display: "block",
     transition: " all 0.6s ease-out",

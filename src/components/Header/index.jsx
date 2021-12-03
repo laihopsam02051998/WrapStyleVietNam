@@ -10,6 +10,7 @@ function Header() {
   const info = JSON.parse(localStorage.getItem("credential"));
   // CHOOSE TAB IN HEADER
   const [isTouch, setIsTouch] = useState(false);
+  const [avatarContent, setAvatarContent] = useState(false);
   const [isLogin, setIsLogin] = useState(null);
 
   const admin = useSelector((state) => {
@@ -102,6 +103,7 @@ function Header() {
               style={
                 isLogin === null ? { display: "none" } : { display: "block" }
               }
+              onClick={() => setAvatarContent(!avatarContent)}
             >
               <AvatarUser />
             </li>
@@ -152,6 +154,20 @@ function Header() {
           <h5>VIETNAM</h5>
           <h5>ENGLISH</h5>
         </div>
+      </div>
+      <div
+        className={
+          avatarContent === true
+            ? classes.avatarContent
+            : classes.avatarContentHide
+        }
+      >
+        <h2>Chào, {info.taiKhoan}</h2>
+        <h4>Quản lý Người dùng</h4>
+        <h4>Quản lý Đơn hàng</h4>
+        <h4>Quản lý Khóa học</h4>
+        <h4>Quản lý Sản phẩm</h4>
+        <h4>Đăng xuất</h4>
       </div>
     </section>
   );
