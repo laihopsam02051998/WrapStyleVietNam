@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import AvatarUser from "../AvatarUser";
 import logo from "./../assets/img/logo-light-145x30.png";
@@ -6,14 +7,22 @@ import useStyleHeader from "./style";
 
 function Header() {
   const classes = useStyleHeader();
-
+  const info = JSON.parse(localStorage.getItem("credential"));
   // CHOOSE TAB IN HEADER
   const [isTouch, setIsTouch] = useState(false);
+  const [isLogin, setIsLogin] = useState(null);
+
+  const admin = useSelector((state) => {
+    return state.UserReducer.credentials;
+  });
+
   useEffect(() => {
     document.getElementById("Touch").classList.toggle("active");
   }, [isTouch]);
 
-  const [isLogin, setIsLogin] = useState(null);
+  useEffect(() => {
+    info !== null ? setIsLogin(info) : setIsLogin(admin);
+  }, [admin]);
 
   return (
     <section className={classes.header}>

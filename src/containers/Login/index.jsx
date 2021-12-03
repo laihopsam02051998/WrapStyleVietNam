@@ -16,8 +16,8 @@ function Login(props) {
   // CREATE YUP OBJECT
   const formik = useFormik({
     initialValues: {
-      username: "",
-      password: "",
+      taiKhoan: "",
+      matKhau: "",
     },
     validationSchema: yup.object({
       ...phoneRegex,
@@ -47,14 +47,14 @@ function Login(props) {
               <Input
                 type="text"
                 placeholder="Phone"
-                name="username"
-                id="username"
-                value={formik.values.username}
+                name="taiKhoan"
+                id="taiKhoan"
+                value={formik.values.taiKhoan}
                 onChange={formik.handleChange}
               />
             </div>
             <div className={classes.regexForm}>
-              {formik.errors.username ? <p>{formik.errors.username}</p> : ""}
+              {formik.errors.taiKhoan ? <p>{formik.errors.taiKhoan}</p> : ""}
             </div>
           </div>
           {/* end username  */}
@@ -67,14 +67,14 @@ function Login(props) {
               <Input
                 type="password"
                 placeholder="Password"
-                id="password"
-                name="password"
-                value={formik.values.password}
+                id="matKhau"
+                name="matKhau"
+                value={formik.values.matKhau}
                 onChange={formik.handleChange}
               />
             </div>
             <div className={classes.regexForm}>
-              {formik.errors.password ? <p>{formik.errors.password}</p> : ""}
+              {formik.errors.matKhau ? <p>{formik.errors.matKhau}</p> : ""}
             </div>
           </div>
           {/* end password  */}

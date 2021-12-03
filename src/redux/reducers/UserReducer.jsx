@@ -7,7 +7,7 @@ let initalState = {
 const UserReducer = (state = initalState, action) => {
   switch (action.type) {
     case LOGIN_USER: {
-      console.log("đã chạy LOGIN USER");
+      state.credentials = action.payload;
       return { ...state };
     }
     default:
