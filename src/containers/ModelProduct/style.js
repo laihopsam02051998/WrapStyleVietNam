@@ -8,4 +8,8 @@ export const styleModel = createUseStyles({
       width: "15%",
     },
   },
+  listCar: {
+    display: "grid",
+    gridTemplateColumns: "repeat(4, 1fr)",
+  },
 });

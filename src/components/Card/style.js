@@ -41,4 +41,47 @@ export const styleNews = createUseStyles({
     letterSpacing: "0.0064rem",
   },
   contentButtonNew: {},
+
+  // --------------------------------
+  cardProduct: {
+    width: "21rem",
+    height: "27rem",
+    marginLeft: "3rem",
+    backgroundColor: "white",
+    overflow: "hidden",
+    borderRadius: "10px",
+    cursor: "pointer",
+  },
+  imageProduct: {
+    "& img": {
+      width: "100%",
+      height: "100%",
+      objectFit: "cover",
+      objectPosition: "center center",
+      display: "block",
+    },
+  },
+  contentProduct: {
+    padding: "0rem 2rem",
+    "& rem": {
+      fontSize: "1.5rem",
+      overflow: "hidden",
+      display: "-webkit-box",
+      WebkitLineClamp: "4",
+      WebkitBoxOrient: "vertical",
+    },
+    "& p": {
+      display: "inline-block",
+      borderRadius: "7px",
+      backgroundColor: "#FF7800",
+      padding: "0.2rem 0.5rem",
+      marginRight: "2px",
+      color: "white",
+    },
+  },
+  productCategory: {
+    overflow: "hidden",
+    whiteSpace: "nowrap",
+    textOverflow: "ellipsis",
+  },
 });

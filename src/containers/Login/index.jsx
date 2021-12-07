@@ -116,7 +116,7 @@ function Login(props) {
       {/* START RIGHT LOGIN   */}
       <div className={classes.contentRightLogin}>
         <h1>
-          Welcome to <br /> Wrapstyle VietNam
+          Welcome to <br /> 2K International
         </h1>
         <h3>Bạn chưa có tài khoản ? </h3>
         <Link to="/SignUp">

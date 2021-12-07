@@ -16,7 +16,7 @@ function Video() {
         </div>
         <div className={classes.videoContent}>
           <h3>
-            Welcome to <br /> Wrap Style <br /> Viet Nam
+            KING DRAG <br /> 2K International circuit <br />
           </h3>
           <ButtonHover backgroundColor={"red"}>Tìm hiểu thêm</ButtonHover>
         </div>
