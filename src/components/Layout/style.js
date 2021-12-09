@@ -16,6 +16,9 @@ const createDetailStyles = createUseStyles({
       objectFit: "cover",
     },
   },
+  containerDetailHide:{
+    display:"none"
+  },
   detailHeaderOne: {
     display: "flex",
     justifyContent: "space-between",
@@ -72,6 +75,27 @@ const createDetailStyles = createUseStyles({
   headerThreeRight: {
     padding: "4rem 0rem",
     width: "63%",
+  },
+
+  // -------------------------
+  TriangleLeftLayout: {
+    display: "flex",
+    justifyContent: "space-between",
+    margin: "1rem 0rem",
+    height: "25rem",
+  },
+  TriangleLeftImage: {
+    "& img": {
+      width: "100%",
+      height: "100%",
+      objectFit: "cover",
+    },
+    clipPath: " polygon(0 0, 100% 0%, 63% 100%, 0% 100%)",
+    width: "55%",
+  },
+  TriangleLeftContent: {
+    padding: "4rem",
+    width: "45%",
   },
 });
 

@@ -44,10 +44,10 @@ export const styleNews = createUseStyles({
 
   // --------------------------------
   cardProduct: {
-    width: "21rem",
-    height: "27rem",
-    marginLeft: "3rem",
-    backgroundColor: "white",
+    width: "23rem",
+    height: "30rem",
+    margin: "0.5rem",
+    backgroundColor: "#F4E185",
     overflow: "hidden",
     borderRadius: "10px",
     cursor: "pointer",

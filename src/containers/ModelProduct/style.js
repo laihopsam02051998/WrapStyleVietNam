@@ -10,6 +10,7 @@ export const styleModel = createUseStyles({
   },
   listCar: {
     display: "grid",
-    gridTemplateColumns: "repeat(4, 1fr)",
+    gridTemplateColumns: "repeat(3, 1fr)",
+    padding: "0rem 4rem",
   },
 });

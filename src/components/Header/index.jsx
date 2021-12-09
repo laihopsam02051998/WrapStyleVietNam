@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import AvatarUser from "../AvatarUser";
 import logo from "./../assets/img/logo-light-145x30.png";
@@ -148,6 +148,12 @@ function Header() {
         <div className={classes.serviceHeader}>
           <h2>DỊCH VỤ HÀNG HẢI</h2>
           <h5>CHI TIẾT</h5>
+          <Link to="/DetailCar">
+            <h5>CAR CHI TIẾT</h5>
+          </Link>
+          <Link to="/DetailAccessory">
+            <h5>CHI TIẾT ACCESSORY</h5>
+          </Link>
         </div>
         <div className={classes.laguageHeader}>
           <h2>NGÔN NGỮ</h2>

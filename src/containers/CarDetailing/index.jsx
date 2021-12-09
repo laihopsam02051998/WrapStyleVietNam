@@ -1,6 +1,6 @@
 import React from "react";
 import Banner from "../../components/Banner";
-import Detail from "../../components/Details";
+import Layout from "../../components/Layout";
 function CarDetailing() {
   return (
     <div>
@@ -10,7 +10,7 @@ function CarDetailing() {
         }
         titleBanner={"KING DRAG"}
       />
-      <Detail />
+      <Layout />
     </div>
   );
 }

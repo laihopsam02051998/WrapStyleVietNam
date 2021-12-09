@@ -1,11 +1,17 @@
 import React from "react";
 import createDetailStyles from "./style";
 
-function Detail() {
+function Detail(props) {
   const classes = createDetailStyles();
 
   return (
-    <div className={classes.containerDetail}>
+    <div
+      className={
+        props.data === null
+          ? classes.containerDetailHide
+          : classes.containerDetail
+      }
+    >
       <div className={classes.detailHeaderOne}>
         <div className={classes.headerOneLeft}>
           <h1>TOUR OF THE PRODUCTION LINES</h1>

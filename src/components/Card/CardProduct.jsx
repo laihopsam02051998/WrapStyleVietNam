@@ -1,25 +1,24 @@
+// import { display } from "@mui/system";
 import React from "react";
 import { styleNews } from "./style";
-function CardProduct() {
+function CardProduct(props) {
   const classes = styleNews();
+
   return (
     <div className={classes.cardProduct}>
       <div className={classes.imageProduct}>
-        <img
-          src="https://wrapstylevietnam.com/images/pro/3_313.jpg"
-          alt="hinh"
-        />
+        <img src={props.car.hinhAnh} alt={props.car.titleProduct} />
       </div>
       <div className={classes.contentProduct}>
         <div className={classes.productCategory}>
-          <p>Novitec</p>
-          <p>Urus</p>
-          <p>Lamborghini</p>
+          <p>{props.car.categoryCar}</p>
+          <p>{props.car.nameProduct}</p>
+          <p style={{ display: props.car.goiDo === null ? "none" : "inline" }}>
+            {props.car.goiDo}
+          </p>
         </div>
         <div className={classes.productName}>
-          <rem>
-            Hệ thống ống xả đua của Novitec dành cho Lamborghini Aventador
-          </rem>
+          <rem>{props.car.titleProduct}</rem>
         </div>
       </div>
     </div>

@@ -1,11 +1,13 @@
 import React from "react";
 import BannerL from "../../components/Banner/BannerL";
+import CarouselBanner from "../../components/Carousel/CarouselBanner";
 import { styleHiring } from "./style";
 
 function Hiring() {
   const classes = styleHiring();
   return (
     <div>
+      <CarouselBanner />
       <section className={classes.hiringbanners}>
         <div className={classes.hiringbannersTitle}>
           <h5>Hãy cùng chúng tôi lập nên kì tích</h5>

@@ -8,6 +8,7 @@ import News from "../News";
 import useHomeStyle from "./style";
 
 import { getProduct } from "../../redux/actions/productAction";
+import { TiTleCategory } from "../../components/Typography";
 function Home() {
   const classes = useHomeStyle();
   const dispatch = useDispatch();
@@ -33,7 +34,10 @@ function Home() {
         <Carousel courseHome={courseHomes} />
         <ButtonHover>Đến cửa hàng</ButtonHover>
       </div>
-      <News />
+      <div>
+        <TiTleCategory>Tin tức</TiTleCategory>
+        <News />
+      </div>
     </div>
   );
 }

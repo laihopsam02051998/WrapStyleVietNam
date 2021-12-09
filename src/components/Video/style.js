@@ -30,4 +30,27 @@ export const useStyleVideo = createUseStyles({
       textTransform: "uppercase",
     },
   },
+  shortVideo: {
+    position: "relative",
+    width: "100%",
+    height: "33rem",
+    overflow: "hidden",
+  },
+  shortVideoHide: {
+    display: "none",
+  },
+  shortVideoContent: {
+    position: "absolute",
+    top: "0px",
+    left: "0px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    textAlign: "center",
+    width: "100%",
+    height: "100%",
+    "& button": {
+      width: "10rem",
+    },
+  },
 });
