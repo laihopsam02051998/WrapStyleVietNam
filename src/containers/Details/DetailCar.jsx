@@ -15,8 +15,8 @@ function DetailCar() {
       <div style={{ padding: "4rem" }}>
         <ShortVideo video={null} />
       </div>
-      <Layout data={null} />
-      <Layout data={null} />
+      <Layout data={"null"} />
+      <Layout data={"null"} />
       <CarouselBanner />
     </div>
   );

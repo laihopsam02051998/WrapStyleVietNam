@@ -1,4 +1,5 @@
 import React from "react";
+import BlockCenterLayout from "./BlockCenterLayout";
 import createDetailStyles from "./style";
 
 function Detail(props) {
@@ -29,14 +30,7 @@ function Detail(props) {
           <img src="https://wrapstylevietnam.com/images/pro/3_313.jpg" />
         </div>
       </div>
-      <div className={classes.detailHeaderTwo}>
-        <div className={classes.headerTwoLeft}>
-          <img src="https://wrapstylevietnam.com/images/media/50.jpg" />
-        </div>
-        <div className={classes.headerTwoRight}>
-          <img src="https://wrapstylevietnam.com/images/pro/3_313.jpg" />
-        </div>
-      </div>
+      <BlockCenterLayout />
       <div className={classes.detailHeaderThree}>
         <div className={classes.headerThreeLeft}>
           <img src="https://wrapstylevietnam.com/images/media/49.jpg" />

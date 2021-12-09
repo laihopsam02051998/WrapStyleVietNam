@@ -8,7 +8,7 @@ const createDetailStyles = createUseStyles({
     },
     "& p": {
       fontSize: "1rem",
-      lineHeight: "1.5rem",
+      lineHeight: "1.8rem",
     },
     "& img": {
       width: "100%",
@@ -16,8 +16,8 @@ const createDetailStyles = createUseStyles({
       objectFit: "cover",
     },
   },
-  containerDetailHide:{
-    display:"none"
+  containerDetailHide: {
+    display: "none",
   },
   detailHeaderOne: {
     display: "flex",
@@ -83,6 +83,9 @@ const createDetailStyles = createUseStyles({
     justifyContent: "space-between",
     margin: "1rem 0rem",
     height: "25rem",
+    "& p": {
+      lineHeight: "1.8rem",
+    },
   },
   TriangleLeftImage: {
     "& img": {
@@ -96,6 +99,63 @@ const createDetailStyles = createUseStyles({
   TriangleLeftContent: {
     padding: "4rem",
     width: "45%",
+  },
+
+  // -------------------------------
+  containerTriangleRightTwo: {
+    display: "flex",
+    justifyContent: "space-between",
+    margin: "0.5rem 0rem",
+    "& p": {
+      lineHeight: "1.8rem",
+    },
+  },
+  rightTwoImage: {
+    "& img": {
+      width: "100%",
+      height: "100%",
+      objectFit: "cover",
+    },
+    width: "55%",
+  },
+  rightTwoContent: {
+    padding: "4rem",
+    width: "45%",
+  },
+  rightTwoImageAbove: {
+    clipPath: "polygon(60% 0, 100% 0%, 100% 100%, 30.5% 100%)",
+  },
+  rightTwoImageUnder: {
+    clipPath: "polygon(100% 0, 100% 58%, 87% 100%, 0% 100%, 30% 0)",
+    margin: "0.5rem 0rem",
+  },
+  // -------------------------------
+  containerTriangleLeftTwo: {
+    display: "flex",
+    justifyContent: "space-between",
+    margin: "0.5rem 0rem",
+    "& p": {
+      lineHeight: "1.8rem",
+    },
+  },
+  leftTwoImage: {
+    "& img": {
+      width: "100%",
+      height: "100%",
+      objectFit: "cover",
+    },
+    width: "55%",
+  },
+  leftTwoContent: {
+    padding: "4rem",
+    width: "45%",
+  },
+  leftTwoImageAbove: {
+    clipPath: "polygon(20% 0, 100% 0, 63.5% 100%, 0 100%, 0 44%)",
+  },
+  leftTwoImageUnder: {
+    clipPath: "polygon(0 0, 63% 0, 28% 100%, 0% 100%)",
+    margin: "0.5rem 0rem",
   },
 });
 
