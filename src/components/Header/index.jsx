@@ -124,41 +124,41 @@ function Header() {
       >
         <div className={classes.serviceHeader}>
           <h2>DỊCH VỤ</h2>
-          <Link to="/ModelProduct">
-            <h5>CAR WRAPPING</h5>
+          <Link to="/ModelProduct" onClick={() => setIsTouch(false)}>
+            <p>CAR WRAPPING</p>
           </Link>
-          <Link to="/CarDetailing">
-            <h5>CAR DETAILING</h5>
+          <Link to="/CarDetailing" onClick={() => setIsTouch(false)}>
+            <p>CAR DETAILING</p>
           </Link>
-          <Link to="/PaintProtection">
-            <h5>PAINT PROTECTION</h5>
+          <Link to="/PaintProtection" onClick={() => setIsTouch(false)}>
+            <p>PAINT PROTECTION</p>
           </Link>
         </div>
         <div className={classes.serviceHeader}>
           <h2>HỢP TÁC</h2>
-          <h5>QUẢNG CÁO BANNER</h5>
-          <h5>HỢP TÁC SẢN PHẨM</h5>
+          <p>QUẢNG CÁO BANNER</p>
+          <p>HỢP TÁC SẢN PHẨM</p>
         </div>
         <div className={classes.serviceHeader}>
           <h2>SẢN PHẨM</h2>
-          <h5>PHỤ KIỆN</h5>
-          <h5>ỐNG XẢ</h5>
-          <h5>MÂM</h5>
+          <p>PHỤ KIỆN</p>
+          <p>ỐNG XẢ</p>
+          <p>MÂM</p>
         </div>
         <div className={classes.serviceHeader}>
           <h2>DỊCH VỤ HÀNG HẢI</h2>
-          <h5>CHI TIẾT</h5>
-          <Link to="/DetailCar">
-            <h5>CAR CHI TIẾT</h5>
+          <p>CHI TIẾT</p>
+          <Link to="/DetailCar" onClick={() => setIsTouch(false)}>
+            <p>CAR CHI TIẾT</p>
           </Link>
-          <Link to="/DetailAccessory">
-            <h5>CHI TIẾT ACCESSORY</h5>
+          <Link to="/DetailAccessory" onClick={() => setIsTouch(false)}>
+            <p>CHI TIẾT ACCESSORY</p>
           </Link>
         </div>
         <div className={classes.laguageHeader}>
           <h2>NGÔN NGỮ</h2>
-          <h5>VIETNAM</h5>
-          <h5>ENGLISH</h5>
+          <p>VIETNAM</p>
+          <p>ENGLISH</p>
         </div>
       </div>
       <div

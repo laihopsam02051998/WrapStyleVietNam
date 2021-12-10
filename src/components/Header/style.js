@@ -161,19 +161,32 @@ const useStyleHeader = createUseStyles({
     color: "white",
     "& h2": {
       margin: "0rem",
+      fontSize: "0.8rem",
+      color: "gray",
     },
-    "& h5": {
+    "& p": {
       color: "white",
-      textDecoration: "none",
       cursor: "pointer",
+      fontSize: "1.3rem",
+      fontWeight: "700",
+      letterSpacing: "0.5px",
+    },
+    "& a": {
+      textDecoration: "none",
     },
   },
   touchContentHide: {
     height: "0vh",
     overflow: "hidden",
     transition: "0.6s ease",
-    "& h5, h2": {
+    "& h2": {
       display: "none",
+    },
+    "& p": {
+      display: "none",
+    },
+    "& a": {
+      textDecoration: "none",
     },
   },
 
