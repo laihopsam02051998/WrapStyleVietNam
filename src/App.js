@@ -14,9 +14,12 @@ import SignUp from "./containers/SignUp";
 import ManagementUser from "./containers/ManagementUser";
 import BookingService from "./containers/BookingServices";
 import Detail from "./containers/Store/Detail";
+import CarDetailing from "./containers/CarDetailing";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { Fragment } from "react";
-
+import PaintProtection from "./containers/PaintProtection";
+import DetailCar from "./containers/Details/DetailCar";
+import DetailAccessory from "./containers/Details/DetailAccessory";
 function App() {
   return (
     <BrowserRouter>
@@ -33,6 +36,11 @@ function App() {
           <Route path="/Hiring" component={Hiring} />
           <Route path="/SignUp" component={SignUp} />
           <Route path="/BookingService" component={BookingService} />
+          <Route path="/CarDetailing" component={CarDetailing} />
+          <Route path="/PaintProtection" component={PaintProtection} />
+          <Route path="/DetailCar" component={DetailCar} />
+          <Route path="/DetailAccessory" component={DetailAccessory} />
+
           {/* <Route path="/ManagementUser" component={ManagementUser} />  */}
           <Route path="/Detail/:courseId" component={Detail} />
           <Route path="/" component={Home} />

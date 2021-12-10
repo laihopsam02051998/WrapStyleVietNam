@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import * as yup from "yup";
 import { useFormik } from "formik";
 import { phoneRegex, passwordRegex, emailRegex } from "../../regex";
+import { signUpUser } from "../../redux/actions/user";
 
 function SignUp() {
   const classes = styleSignUp();
@@ -13,16 +14,28 @@ function SignUp() {
   // CREATE YUP OBJECT
   const formik = useFormik({
     initialValues: {
-      phone: "",
-      password: "",
+      taiKhoan: "",
+      matKhau: "",
+      email: "",
     },
     validationSchema: yup.object({
       ...phoneRegex,
       ...passwordRegex,
       ...emailRegex,
+      // ...passwordConfirmRegex,
     }),
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      const infoUser = {
+        taiKhoan: "admindepzai",
+        matKhau: "123456789",
+        hoTen: "laihopsam",
+        soDT: "0985929816",
+        maNhom: "GP01",
+        email: "laihopsam@gmail.com",
+      };
+      console.log(values);
+      console.log(infoUser);
+      signUpUser(infoUser);
     },
   });
   // END YUP OBJECT
@@ -30,7 +43,7 @@ function SignUp() {
   return (
     <div className={classes.container}>
       {/* START LEFT LOGIN   */}
-      <form onSubmit={formik.handleSubmit} className={classes.contentLeftLogin}>
+      <form className={classes.contentLeftLogin} onSubmit={formik.handleSubmit}>
         <div className={classes.loginTitle}>
           <h1>Sign up</h1>
         </div>
@@ -41,54 +54,55 @@ function SignUp() {
               <Input
                 type="text"
                 placeholder="Phone"
-                name="phone"
-                id="phone"
+                name="taiKhoan"
+                id="taiKhoan"
+                value={formik.values.taiKhoan}
                 onChange={formik.handleChange}
               />
             </div>
             <div className={classes.regexForm}>
-              {formik.errors.phone ? <p>{formik.errors.phone}</p> : ""}
+              {formik.errors.taiKhoan ? <p>{formik.errors.taiKhoan}</p> : " "}
             </div>
           </div>
           {/* END PHONE  */}
           {/* START USERNAME  */}
-          <div className={classes.usernameLogin}>
+          <div className={classes.emailLogin}>
             <div className={classes.inputForm}>
               <Input
                 type="text"
                 placeholder="Email"
                 name="email"
                 id="email"
+                value={formik.values.email}
                 onChange={formik.handleChange}
               />
             </div>
             <div className={classes.regexForm}>
-              {formik.errors.email ? <p>{formik.errors.email}</p> : ""}
+              {formik.errors.email ? <p>{formik.errors.email}</p> : " "}
             </div>
           </div>
           {/* END USERNAME  */}
-
           {/* START PASSWORD  */}
           <div className={classes.passwordLogin}>
             <div className={classes.inputForm}>
               <Input
                 type="password"
                 placeholder="Password"
-                name="password"
-                id="password"
+                name="matKhau"
+                id="matKhau"
+                value={formik.values.matKhau}
                 onChange={formik.handleChange}
               />
             </div>
             <div className={classes.regexForm}>
               <p>
-                {" "}
-                {formik.errors.password ? <p>{formik.errors.password}</p> : " "}
+                {formik.errors.matKhau ? <p>{formik.errors.matKhau}</p> : " "}
               </p>
             </div>
           </div>
           {/* END PASSWORD */}
           {/* start password  */}
-          <div className={classes.passwordLogin}>
+          <div className={classes.passwordConfirmLogin}>
             <div className={classes.inputForm}>
               <Input
                 type="password"
@@ -98,9 +112,13 @@ function SignUp() {
                 onChange={formik.handleChange}
               />
             </div>
-            <div className={classes.regexForm}>
-              <p>Tài khoản hợp lệ</p>
-            </div>
+            <p>
+              {formik.errors.confrimPassword ? (
+                <p>{formik.errors.confrimPassword}</p>
+              ) : (
+                " "
+              )}
+            </p>
           </div>
           {/* end password  */}
           {/* start checkbox  */}
@@ -113,7 +131,6 @@ function SignUp() {
                 defaultValue="Bike"
               />
               <label htmlFor="vehicle1">
-                {" "}
                 By signing up you accept the Term of service and Privacy Policy
               </label>
             </div>

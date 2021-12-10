@@ -18,7 +18,10 @@ function Product(props) {
       </div>
       <div className={classes.productContentPrice}>
         <p>
-          Lượt xem: <span>{props.course.luotXem}</span>
+          Lượt xem:{" "}
+          <span>
+            {props.course.luotXem !== " " ? props.course.luotXem : " "}
+          </span>
         </p>
       </div>
       <div className={classes.productContentButton}>

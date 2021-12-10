@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { ButtonHover } from "../../components/Button/Button";
 import Carousel from "../../components/Carousel";
@@ -8,6 +8,7 @@ import News from "../News";
 import useHomeStyle from "./style";
 
 import { getProduct } from "../../redux/actions/productAction";
+import { TiTleCategory } from "../../components/Typography";
 function Home() {
   const classes = useHomeStyle();
   const dispatch = useDispatch();
@@ -33,7 +34,10 @@ function Home() {
         <Carousel courseHome={courseHomes} />
         <ButtonHover>Đến cửa hàng</ButtonHover>
       </div>
-      <News />
+      <div>
+        <TiTleCategory>Tin tức</TiTleCategory>
+        <News />
+      </div>
     </div>
   );
 }

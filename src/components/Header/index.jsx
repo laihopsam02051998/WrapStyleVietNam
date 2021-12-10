@@ -1,16 +1,29 @@
 import React, { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import AvatarUser from "../AvatarUser";
 import logo from "./../assets/img/logo-light-145x30.png";
 import useStyleHeader from "./style";
 
 function Header() {
   const classes = useStyleHeader();
-
+  const info = JSON.parse(localStorage.getItem("credential"));
   // CHOOSE TAB IN HEADER
-  const [isOpen, setIsOpen] = useState(false);
+  const [isTouch, setIsTouch] = useState(false);
+  const [avatarContent, setAvatarContent] = useState(false);
+  const [isLogin, setIsLogin] = useState(null);
+
+  const admin = useSelector((state) => {
+    return state.UserReducer.credentials;
+  });
+
   useEffect(() => {
     document.getElementById("Touch").classList.toggle("active");
-  }, [isOpen]);
+  }, [isTouch]);
+
+  useEffect(() => {
+    info !== null ? setIsLogin(info) : setIsLogin(admin);
+  }, [admin]);
 
   return (
     <section className={classes.header}>
@@ -21,9 +34,6 @@ function Header() {
               <Link to="/">
                 <img src={logo} alt />
               </Link>
-            </li>
-            <li id="menuActivity">
-              <Link to="/Activity">DỊCH VỤ</Link>
             </li>
 
             <li id="menuCooprate">
@@ -36,17 +46,19 @@ function Header() {
             <li id="menuModel">
               <Link to="/BookingService">ĐẶT LỊCH</Link>
             </li>
+            <li>
+              <Link to="/AboutUs">VỀ CHÚNG TÔI</Link>
+            </li>
           </ul>
         </div>
         <div className={classes.header__right}>
           <ul>
             <li>
-              <Link to="/AboutUs">VỀ CHÚNG TÔI</Link>
-            </li>
-            <li>
               <Link to="/News">TIN TỨC</Link>
             </li>
-
+            <li id="menuActivity">
+              <Link to="/Activity">GIẢI ĐẤU</Link>
+            </li>
             <li>
               <Link to="/Hiring">TUYỂN DỤNG</Link>
             </li>
@@ -69,7 +81,11 @@ function Header() {
                 </svg>
               </Link>
             </li>
-            <li>
+            <li
+              style={
+                isLogin !== null ? { display: "none" } : { display: "block" }
+              }
+            >
               <Link to="/Login">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -83,15 +99,82 @@ function Header() {
                 </svg>
               </Link>
             </li>
+            <li
+              style={
+                isLogin === null ? { display: "none" } : { display: "block" }
+              }
+              onClick={() => setAvatarContent(!avatarContent)}
+            >
+              <AvatarUser />
+            </li>
             <li>
               <div
                 className={classes.Touch}
-                onClick={() => setIsOpen(!isOpen)}
+                onClick={() => setIsTouch(!isTouch)}
                 id="Touch"
               />
             </li>
           </ul>
         </div>
+      </div>
+      <div
+        className={
+          isTouch === true ? classes.touchContent : classes.touchContentHide
+        }
+      >
+        <div className={classes.serviceHeader}>
+          <h2>DỊCH VỤ</h2>
+          <Link to="/ModelProduct">
+            <h5>CAR WRAPPING</h5>
+          </Link>
+          <Link to="/CarDetailing">
+            <h5>CAR DETAILING</h5>
+          </Link>
+          <Link to="/PaintProtection">
+            <h5>PAINT PROTECTION</h5>
+          </Link>
+        </div>
+        <div className={classes.serviceHeader}>
+          <h2>HỢP TÁC</h2>
+          <h5>QUẢNG CÁO BANNER</h5>
+          <h5>HỢP TÁC SẢN PHẨM</h5>
+        </div>
+        <div className={classes.serviceHeader}>
+          <h2>SẢN PHẨM</h2>
+          <h5>PHỤ KIỆN</h5>
+          <h5>ỐNG XẢ</h5>
+          <h5>MÂM</h5>
+        </div>
+        <div className={classes.serviceHeader}>
+          <h2>DỊCH VỤ HÀNG HẢI</h2>
+          <h5>CHI TIẾT</h5>
+          <Link to="/DetailCar">
+            <h5>CAR CHI TIẾT</h5>
+          </Link>
+          <Link to="/DetailAccessory">
+            <h5>CHI TIẾT ACCESSORY</h5>
+          </Link>
+        </div>
+        <div className={classes.laguageHeader}>
+          <h2>NGÔN NGỮ</h2>
+          <h5>VIETNAM</h5>
+          <h5>ENGLISH</h5>
+        </div>
+      </div>
+      <div
+        className={
+          avatarContent === true
+            ? classes.avatarContent
+            : classes.avatarContentHide
+        }
+      >
+        <h2>Chào, {info?.taiKhoan === undefined ? " " : info.taiKhoan}</h2>
+
+        <h4>Quản lý Người dùng</h4>
+        <h4>Quản lý Đơn hàng</h4>
+        <h4>Quản lý Khóa học</h4>
+        <h4>Quản lý Sản phẩm</h4>
+        <h4>Đăng xuất</h4>
       </div>
     </section>
   );

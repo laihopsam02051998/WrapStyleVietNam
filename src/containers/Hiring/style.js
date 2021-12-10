@@ -21,4 +21,10 @@ export const styleHiring = createUseStyles({
       fontSize: "1.2rem",
     },
   },
+  hiringpositionTitle: {
+    textAlign: "center",
+    "& h3": {
+      fontWeight: "normal",
+    },
+  },
 });

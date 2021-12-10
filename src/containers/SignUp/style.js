@@ -6,6 +6,12 @@ export const styleSignUp = createUseStyles({
     justifyContent: "space-around",
     padding: "2rem 4rem",
   },
+  loginForm: {
+    height: "27rem",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+  },
   regexForm: {
     "& p": {
       fontSize: "0.8rem",

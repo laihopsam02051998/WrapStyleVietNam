@@ -10,10 +10,25 @@ export const login = (user) => {
       .signIn(user)
       .then((res) => {
         dispatch(createAction(LOGIN_USER, res.data));
-        // localStorage.setItem("credential", JSON.stringify(res.data));
+        localStorage.setItem("credential", JSON.stringify(res.data));
+        console.log("Thành công" + user);
       })
       .catch((err) => {
         console.log(err);
+        console.log("Tài khoản hoặc mật khẩu chưa đúng");
       });
   };
+};
+
+export const signUpUser = (user) => {
+  userService
+    .signUp(user)
+    .then((res) => {
+      console.log(res);
+      console.log("thành công");
+    })
+    .catch((err) => {
+      console.log(err);
+      console.log("thất bại");
+    });
 };

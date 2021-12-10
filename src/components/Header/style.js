@@ -7,7 +7,6 @@ const useStyleHeader = createUseStyles({
     overflow: "hidden",
     fontSize: "1rem",
     transition: " all 0.6s ease",
-    // position: "fixed",
     zIndex: "99",
   },
   header__menu: {
@@ -150,13 +149,57 @@ const useStyleHeader = createUseStyles({
       transform: " translateY(-10px)",
     },
   },
+  touchContent: {
+    display: "grid",
+    gridTemplateColumns: "repeat(4, 1fr)",
+    justifyContent: "space-between",
+    textAlign: "left",
+    padding: "0rem 0rem 0rem 6rem",
+    height: "70vh",
+    overflow: "hidden",
+    transition: "0.6s ease",
+    color: "white",
+    "& h2": {
+      margin: "0rem",
+    },
+    "& h5": {
+      color: "white",
+      textDecoration: "none",
+      cursor: "pointer",
+    },
+  },
+  touchContentHide: {
+    height: "0vh",
+    overflow: "hidden",
+    transition: "0.6s ease",
+    "& h5, h2": {
+      display: "none",
+    },
+  },
 
+  avatarContent: {
+    display: "block",
+    color: "white",
+    width: "100%",
+    height: "45vh",
+    padding: "0rem 4rem",
+    transition: "0.6s ease",
+  },
+  avatarContentHide: {
+    height: "0vh",
+    overflow: "hidden",
+    transition: "0.6s ease",
+  },
   showButton: {
     display: "block",
     transition: " all 0.6s ease-out",
     height: "30rem",
   },
   // END BUTTON TOUCH
+
+  serviceTop: {
+    display: "flex",
+  },
 });
 
 export default useStyleHeader;

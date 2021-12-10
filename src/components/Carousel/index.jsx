@@ -4,7 +4,6 @@ import SwiperCore, { Navigation, Pagination } from "swiper";
 import "swiper/swiper-bundle.css";
 import useStyleCarousel from "../Carousel/style.js";
 
-import "./swiper.css";
 import Product from "../Product/index.jsx";
 
 SwiperCore.use([Navigation, Pagination]);
