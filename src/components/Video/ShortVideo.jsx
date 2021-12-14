@@ -3,6 +3,7 @@ import { useStyleVideo } from "./style";
 
 import video from "./../assets/video/Aventador SVJ_ (1080p).mp4";
 import HexagonButton from "../Button/HexagonButton";
+
 function ShortVideo(props) {
   const vidRef = useRef(null);
   const [buttonVideo, setButtonVideo] = useState(false);

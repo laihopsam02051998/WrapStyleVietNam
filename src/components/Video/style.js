@@ -40,17 +40,27 @@ export const useStyleVideo = createUseStyles({
     display: "none",
   },
   shortVideoContent: {
-    position: "absolute",
-    top: "0px",
-    left: "0px",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    textAlign: "center",
+    position: "absolute",
+    top: "0px",
+    left: "0px",
     width: "100%",
     height: "100%",
+    // backgroundColor: "red",
     "& button": {
       width: "10rem",
+    },
+    cursor: "pointer",
+    "&:hover path:nth-child(2)": {
+      stroke: "black",
+      fill: "transparent",
+      transition: "0.3s ease",
+    },
+    "&:hover path:nth-child(1)": {
+      fill: "white",
+      transition: "0.3s ease",
     },
   },
 });

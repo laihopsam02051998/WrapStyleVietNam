@@ -12,6 +12,21 @@ const useStyleCarousel = createUseStyles({
   },
   containerCarousel: {
     overflow: "hidden",
+    position: "relative",
+    // top: "0px",
+    // left: "0px",
+  },
+  navigationCustomize: {
+    display: "flex",
+    justifyContent: "space-between",
+    position: "absolute",
+    top: "0px",
+    left: "0px",
+    zIndex: "9",
+    width: "100%",
+    height: "100%",
+    alignItems: "center",
+    padding: "0px 1rem",
   },
 });
 export default useStyleCarousel;

@@ -1,4 +1,6 @@
 import React from "react";
+import HexagonButton from "../../components/Button/HexagonButton";
+
 import CarouselBanner from "../../components/Carousel/CarouselBanner";
 import TriangleLeftLayout from "../../components/Layout/TriangleLeftLayout";
 import Video from "../../components/Video";
@@ -13,10 +15,11 @@ function DetailCar() {
       </div>
       <TriangleLeftLayout />
       <div style={{ padding: "4rem" }}>
-        <ShortVideo video={null} />
+        <ShortVideo video={"null"} />
       </div>
       <Layout data={"null"} />
       <Layout data={"null"} />
+      <HexagonButton />
       <CarouselBanner />
     </div>
   );
