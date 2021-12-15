@@ -42,6 +42,11 @@ const createDetailStyles = createUseStyles({
     width: "100%",
     height: "33.3rem",
     overflow: "hidden",
+    "& img": {
+      width: "100%",
+      height: "100%",
+      objectFit: "cover",
+    },
   },
   headerTwoLeft: {
     position: "absolute",
@@ -148,7 +153,8 @@ const createDetailStyles = createUseStyles({
   },
   leftTwoContent: {
     padding: "4rem",
-    width: "45%",
+    width: "100%",
+    lineHeight: "1.8rem",
   },
   leftTwoImageAbove: {
     clipPath: "polygon(20% 0, 100% 0, 63.5% 100%, 0 100%, 0 44%)",

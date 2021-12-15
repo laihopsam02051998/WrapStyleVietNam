@@ -63,6 +63,32 @@ const useStyleBanner = createUseStyles({
     },
   },
   //END CONTAINER BANNERL
+
+  modelContentFullTitle: {
+    width: "100%",
+
+    "& h4": { fontSize: "2rem", margin: "1rem 0rem" },
+    "& h1": {
+      fontSize: "4rem",
+      margin: "1rem 0rem",
+    },
+    "& p": {
+      lineHeight: "2rem",
+    },
+  },
+  modelContentFull: {
+    position: "absolute",
+    padding: "2rem",
+    top: "0px",
+    left: "0px",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    width: "100%",
+    height: "100%",
+    color: "white",
+    backgroundColor: "rgba(0, 0, 0, 0.671)",
+  },
 });
 
 export default useStyleBanner;

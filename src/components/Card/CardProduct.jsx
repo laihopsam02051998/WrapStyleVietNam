@@ -6,8 +6,8 @@ function CardProduct(props) {
   const classes = styleNews();
 
   return (
-    <Link to={`/DetailCar/${props.car.id}`}>
-      <div className={classes.cardProduct}>
+    <article className={classes.cardProduct}>
+      <Link to={`/DetailCar/${props.car.id}`}>
         <div className={classes.imageProduct}>
           <img src={props.car.hinhAnh} alt={props.car.titleProduct} />
         </div>
@@ -25,8 +25,8 @@ function CardProduct(props) {
             <rem>{props.car.titleProduct}</rem>
           </div>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </article>
   );
 }
 export default CardProduct;

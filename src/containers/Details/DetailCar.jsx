@@ -3,10 +3,12 @@ import HexagonButton from "../../components/Button/HexagonButton";
 
 import CarouselBanner from "../../components/Carousel/CarouselBanner";
 import TriangleLeftLayout from "../../components/Layout/TriangleLeftLayout";
-import Video from "../../components/Video";
+import BlockCenterLayout from "../../components/Layout/BlockCenterLayout";
 import car from "../../data/car.json";
 import ShortVideo from "../../components/Video/ShortVideo";
 import Layout from "./../../components/Layout";
+import { BannerFull } from "../../components/Banner/BannerFull";
+import BlockLayout from "../../components/Layout/BlockLayout";
 
 function DetailCar(props) {
   const carArr = car.car.carArr;
@@ -17,14 +19,37 @@ function DetailCar(props) {
   return (
     <div>
       <div style={{ padding: "0rem" }}>
-        <Video />
+        <BannerFull
+          image={carDetail[0].hinhAnh}
+          title={carDetail[0].titleProduct}
+        />
       </div>
-      <TriangleLeftLayout content={null} imageOne={carDetail[0].hinhAnh} />
+      <TriangleLeftLayout
+        content={carDetail[0].foreword}
+        image={carDetail[0].hinhAnh}
+      />
       <div style={{ padding: "4rem" }}>
-        <ShortVideo video={"null"} posterA={carDetail[0].hinhAnh} />
+        <ShortVideo
+          video={carDetail[0].video.linkVideo}
+          poster={carDetail[0].video.videoPoster}
+        />
       </div>
-      <Layout detailImages={carDetail[0].hinhAnhChiTiet} />
-      <Layout detailImages={carDetail[0].hinhAnhChiTiet} />
+      <Layout
+        status={carDetail[0].firstImageBody.status}
+        images={carDetail[0].firstImageBody}
+        content={carDetail[0].firstContentBody}
+      />
+      <Layout
+        status={carDetail[0].secondImageBody.status}
+        images={carDetail[0].secondImageBody}
+        content={carDetail[0].secondContentBody}
+      />
+      <BlockLayout
+        status={carDetail[0].second2ImageBody.status}
+        content={carDetail[0].secondContentBody}
+        images={carDetail[0].second2ImageBody}
+      />
+
       <HexagonButton />
       <CarouselBanner Slider={carDetail[0].Slide} />
     </div>

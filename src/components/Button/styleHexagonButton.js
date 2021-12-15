@@ -3,6 +3,7 @@ import { createUseStyles } from "react-jss";
 const styleHexagon = createUseStyles({
   Icon: {
     cursor: "pointer",
+    // maxWidth: "0%",
     "&:hover path:nth-child(2)": {
       stroke: "black",
       fill: "transparent",

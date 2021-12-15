@@ -13,8 +13,6 @@ const useStyleCarousel = createUseStyles({
   containerCarousel: {
     overflow: "hidden",
     position: "relative",
-    // top: "0px",
-    // left: "0px",
   },
   navigationCustomize: {
     display: "flex",

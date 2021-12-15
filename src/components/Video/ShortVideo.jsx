@@ -12,7 +12,7 @@ function ShortVideo(props) {
     setButtonVideo(!buttonVideo);
   };
   const classes = useStyleVideo();
-  console.log(props.posterA);
+  // console.log(props.poster);
   return (
     <div
       className={
@@ -23,7 +23,7 @@ function ShortVideo(props) {
         <video
           loop
           ref={vidRef}
-          poster={props.posterA}
+          poster={props.poster}
           width="100%"
           height="100%"
         >

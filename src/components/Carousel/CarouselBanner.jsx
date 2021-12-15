@@ -20,6 +20,7 @@ function CarouselBanner(props) {
     props.Slider.image3,
     props.Slider.image4,
     props.Slider.image5,
+    props.Slider.image6,
   ];
 
   return (
