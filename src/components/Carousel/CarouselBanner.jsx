@@ -9,19 +9,19 @@ import { NomalImage } from "../Card/styled";
 import useStyleCarousel from "../Carousel/style.js";
 
 SwiperCore.use([Navigation]);
-function CarouselBanner() {
+function CarouselBanner(props) {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   const swiperRef = React.useRef(null);
   const classes = useStyleCarousel();
   const arrImage = [
-    "https://wrapstylevietnam.com/Uploads/images/WS-Porsche%20911%20Carrera%20Bespoke17.jpg",
-    "https://wrapstylevietnam.com/Uploads/images/WS-Porsche%20911%20Carrera%20Bespoke11.jpg",
-    "https://wrapstylevietnam.com/Uploads/images/WS-Porsche%20911%20Carrera%20Bespoke12.jpg",
-    "https://wrapstylevietnam.com/Uploads/images/WS-Porsche%20911%20Carrera%20Bespoke13.jpg",
-    "https://wrapstylevietnam.com/Uploads/images/WS-Porsche%20911%20Carrera%20Bespoke14.jpg",
-    "https://wrapstylevietnam.com/Uploads/images/WS-Porsche%20911%20Carrera%20Bespoke15.jpg",
+    props.Slider.image1,
+    props.Slider.image2,
+    props.Slider.image3,
+    props.Slider.image4,
+    props.Slider.image5,
   ];
+
   return (
     <div className={classes.containerCarousel}>
       <Swiper

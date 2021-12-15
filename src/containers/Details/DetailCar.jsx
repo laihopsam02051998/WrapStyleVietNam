@@ -4,23 +4,29 @@ import HexagonButton from "../../components/Button/HexagonButton";
 import CarouselBanner from "../../components/Carousel/CarouselBanner";
 import TriangleLeftLayout from "../../components/Layout/TriangleLeftLayout";
 import Video from "../../components/Video";
+import car from "../../data/car.json";
 import ShortVideo from "../../components/Video/ShortVideo";
 import Layout from "./../../components/Layout";
 
-function DetailCar() {
+function DetailCar(props) {
+  const carArr = car.car.carArr;
+  const carDetail = carArr.filter((sp) => {
+    return sp.id === props.match.params.Id;
+  });
+
   return (
     <div>
       <div style={{ padding: "0rem" }}>
         <Video />
       </div>
-      <TriangleLeftLayout />
+      <TriangleLeftLayout content={null} imageOne={carDetail[0].hinhAnh} />
       <div style={{ padding: "4rem" }}>
-        <ShortVideo video={"null"} />
+        <ShortVideo video={"null"} posterA={carDetail[0].hinhAnh} />
       </div>
-      <Layout data={"null"} />
-      <Layout data={"null"} />
+      <Layout detailImages={carDetail[0].hinhAnhChiTiet} />
+      <Layout detailImages={carDetail[0].hinhAnhChiTiet} />
       <HexagonButton />
-      <CarouselBanner />
+      <CarouselBanner Slider={carDetail[0].Slide} />
     </div>
   );
 }

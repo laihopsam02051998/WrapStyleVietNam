@@ -8,7 +8,7 @@ function Detail(props) {
   return (
     <div
       className={
-        props.data === null
+        props.detailImages === null
           ? classes.containerDetailHide
           : classes.containerDetail
       }
@@ -27,13 +27,16 @@ function Detail(props) {
           </p>
         </div>
         <div className={classes.headerOneRight}>
-          <img src="https://wrapstylevietnam.com/images/pro/3_313.jpg" />
+          <img src={props.detailImages.hinhAnh1} />
         </div>
       </div>
-      <BlockCenterLayout />
+      <BlockCenterLayout
+        image1={props.detailImages.hinhAnh2}
+        image2={props.detailImages.hinhAnh3}
+      />
       <div className={classes.detailHeaderThree}>
         <div className={classes.headerThreeLeft}>
-          <img src="https://wrapstylevietnam.com/images/media/49.jpg" />
+          <img src={props.detailImages.hinhAnh4} />
         </div>
         <div className={classes.headerThreeRight}>
           <h1>TOUR OF THE PRODUCTION LINES</h1>

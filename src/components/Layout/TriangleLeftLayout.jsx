@@ -1,12 +1,13 @@
 import React from "react";
 import createDetailStyles from "./style";
 
-function TriangleLeftLayout() {
+function TriangleLeftLayout(props) {
   const classes = createDetailStyles();
+  console.log(props.imageOne);
   return (
     <div className={classes.TriangleLeftLayout}>
       <div className={classes.TriangleLeftImage}>
-        <img src="https://wrapstylevietnam.com/Uploads/images/WS-Porsche%20911%20Carrera%20Bespoke17.jpg" />
+        <img src={props.imageOne} />
       </div>
       <div className={classes.TriangleLeftContent}>
         <h1>TOUR OF THE PRODUCTION LINES</h1>

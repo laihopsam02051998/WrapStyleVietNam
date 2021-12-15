@@ -7,7 +7,6 @@ function Hiring() {
   const classes = styleHiring();
   return (
     <div>
-      <CarouselBanner />
       <section className={classes.hiringbanners}>
         <div className={classes.hiringbannersTitle}>
           <h5>Hãy cùng chúng tôi lập nên kì tích</h5>

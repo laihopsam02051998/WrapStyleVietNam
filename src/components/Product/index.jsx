@@ -26,7 +26,6 @@ function Product(props) {
       </div>
       <div className={classes.productContentButton}>
         <Link to={`/Detail/${props.course.maKhoaHoc}`}>
-          {" "}
           <Button backgroundColor={"#FF7800"}>Xem chi tiết</Button>
         </Link>
       </div>

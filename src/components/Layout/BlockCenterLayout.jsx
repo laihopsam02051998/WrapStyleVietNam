@@ -1,15 +1,15 @@
 import React from "react";
 import createDetailStyles from "./style";
-function BlockCenterLayout() {
+function BlockCenterLayout(props) {
   const classes = createDetailStyles();
   return (
     <div>
       <div className={classes.detailHeaderTwo}>
         <div className={classes.headerTwoLeft}>
-          <img src="https://wrapstylevietnam.com/images/media/50.jpg" />
+          <img src={props.image1} />
         </div>
         <div className={classes.headerTwoRight}>
-          <img src="https://wrapstylevietnam.com/images/pro/3_313.jpg" />
+          <img src={props.image2} />
         </div>
       </div>
     </div>

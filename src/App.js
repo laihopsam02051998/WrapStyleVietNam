@@ -43,7 +43,7 @@ function App() {
           <Route path="/BookingService" component={BookingService} />
           <Route path="/CarDetailing" component={CarDetailing} />
           <Route path="/PaintProtection" component={PaintProtection} />
-          <Route path="/DetailCar" component={DetailCar} />
+          <Route path="/DetailCar/:Id" component={DetailCar} />
           <Route path="/DetailAccessory" component={DetailAccessory} />
           <Route path="/Detail/:courseId" component={Detail} />
           <Route path="/Login" component={Login} />

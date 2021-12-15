@@ -12,7 +12,7 @@ function ShortVideo(props) {
     setButtonVideo(!buttonVideo);
   };
   const classes = useStyleVideo();
-
+  console.log(props.posterA);
   return (
     <div
       className={
@@ -23,9 +23,7 @@ function ShortVideo(props) {
         <video
           loop
           ref={vidRef}
-          poster={
-            "https://static1.cafeland.vn/cafeautoData/upload/tintuc/thitruong/2021/06/tuan-01/2-1622795046.jpg"
-          }
+          poster={props.posterA}
           width="100%"
           height="100%"
         >

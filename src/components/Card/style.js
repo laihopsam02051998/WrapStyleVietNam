@@ -63,8 +63,10 @@ export const styleNews = createUseStyles({
   },
   contentProduct: {
     padding: "0rem 2rem",
+
     "& rem": {
       fontSize: "1.5rem",
+      textDecoration: "none",
       overflow: "hidden",
       display: "-webkit-box",
       WebkitLineClamp: "4",

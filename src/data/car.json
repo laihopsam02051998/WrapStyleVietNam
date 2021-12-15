@@ -4,7 +4,7 @@
             {
                 "id": "CAR01",
                 "titleProduct": " LAMBORGHINI AVENTADOR SVJ TITANIUM RACE EXHAUST WITH TIPS FIRST EDITION",
-                "moTa": "",
+                "videoPoster": "https://wrapstylevietnam.com/Uploads/images/WS-Lamborghini%20Huracan%20pha%CC%82%CC%80n%2017.jpg",
                 "categoryCar": "LAMBORGHINI",
                 "nameProduct": "AVENTADOR SVJ",
                 "goiDo": "Liberty walk",
@@ -28,7 +28,7 @@
               {
                 "id": "CAR02",
                 "titleProduct": "WRAPSTYLE HCM LỘT XÁC PORSCHE 911 CARRERA VỚI BỘ CÁNH ĐƯỢC CÁ NHÂN HOÁ",
-                "moTa": "",
+                "videoPoster": "",
                 "categoryCar": "Porsche",
                 "nameProduct": "911 Carrera",
                 "goiDo": null,
@@ -52,7 +52,7 @@
               {
                 "id": "CAR03",
                 "titleProduct": " MERCEDES-AMG G63 ĐỘ TOPCAR DESIGN INFERNO LIGHT ĐẦU TIÊN TẠI VIỆT NAM",
-                "moTa": "",
+                "videoPoster": "",
                 "categoryCar": "Mescedes",
                 "nameProduct": "AMG G63",
                 "goiDo": "INFERNO LIGHT",
@@ -76,7 +76,7 @@
               {
                 "id": "CAR04",
                 "titleProduct": "PORSCHE 911 CARRERA TRONG BỘ ÁO GULF LIVERY - MANG DI SẢN ĐƯỜNG ĐUA ĐẾN VỚI SÀI GÒN",
-                "moTa": "",
+                "videoPoster": "",
                 "categoryCar": "Porche",
                 "nameProduct": "911 Carrena",
                 "goiDo": "GULF LIVERY",
@@ -100,7 +100,7 @@
               {
                 "id": "CAR05",
                 "titleProduct": "HỆ THỐNG ỐNG XẢ NOVITEC - MẢNH GHÉP HOÀN THIỆN SỨC MẠNH CHO MCLAREN 720S SPIDER",
-                "moTa": "",
+                "videoPoster": "",
                 "categoryCar": "MCLAREN",
                 "nameProduct": "720S SPIDER",
                 "goiDo": null ,
@@ -124,7 +124,7 @@
               {
                 "id": "CAR06",
                 "titleProduct": "FERRARI SF90 STRADALE - CON QUỶ DỮ TRONG HÌNH HÀI CỦA MỘT TÁC PHẨM NGHỆ THUẬT",
-                "moTa": "",
+                "videoPoster": "",
                 "categoryCar": "FERRARI",
                 "nameProduct": "SF90 STRADALE",
                 "goiDo": null ,
@@ -148,7 +148,7 @@
               {
                 "id": "CAR07",
                 "titleProduct": "NOVITEC RA MẮT GÓI NÂNG CẤP N-LARGO DÀNH CHO FERRARI F8 SPIDER",
-                "moTa": "",
+                "videoPoster": "",
                 "categoryCar": "MCLAREN",
                 "nameProduct": "720S SPIDER",
                 "goiDo": null ,
@@ -172,14 +172,14 @@
               {
                 "id": "CAR08",
                 "titleProduct": "LAMBORGHINI AVENTADOR SVJ THAY ÁO CỰC CHẤT- DẤU ẤN ĐƯỜNG ĐUA ĐẾN TỪ WRAPSTYLE",
-                "moTa": "",
+                "videoPoster": "",
                 "categoryCar": "LAMBORGHINI",
                 "nameProduct": "AVENTADOR SVJ",
                 "goiDo": null ,
                 "ngayTao": "21/12/2021",
                 "hinhAnh": "https://wrapstylevietnam.com/Uploads/images/WS-Lamborghini%20Aventador%20SVJ%20(4).jpg",
                 "hinhAnhChiTiet":{
-                  "hinhAnh1": "hhttps://wrapstylevietnam.com/Uploads/images/WS-Lamborghini%20Aventador%20SVJ%20(12).jpg",
+                  "hinhAnh1": "https://wrapstylevietnam.com/Uploads/images/WS-Lamborghini%20Aventador%20SVJ%20(12).jpg",
                   "hinhAnh2": "https://wrapstylevietnam.com/Uploads/images/WS-Lamborghini%20Aventador%20SVJ%20(14).jpg",
                   "hinhAnh3": "https://wrapstylevietnam.com/Uploads/images/WS-Lamborghini%20Aventador%20SVJ%20(10).jpg",
                   "hinhAnh4": "https://wrapstylevietnam.com/Uploads/images/WS-Lamborghini%20Aventador%20SVJ%20(11).jpg",
@@ -190,7 +190,7 @@
                     "image1": "https://wrapstylevietnam.com/Uploads/images/WS-Lamborghini%20Aventador%20SVJ%20(4).jpg",
                     "image2": "https://wrapstylevietnam.com/Uploads/images/WS-Lamborghini%20Aventador%20SVJ%20(18).jpg",
                     "image3": "https://wrapstylevietnam.com/Uploads/images/WS-Lamborghini%20Aventador%20SVJ%20(24).jpg",
-                    "image4": "hhttps://wrapstylevietnam.com/Uploads/images/WS-Lamborghini%20Aventador%20SVJ%20(19).jpg",
+                    "image4": "https://wrapstylevietnam.com/Uploads/images/WS-Lamborghini%20Aventador%20SVJ%20(19).jpg",
                     "image5": "https://wrapstylevietnam.com/Uploads/images/WS-Lamborghini%20Aventador%20SVJ%20(26).jpg"                }
               }
         ]
